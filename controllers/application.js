@@ -5,7 +5,7 @@ module.exports = {
     index: (req, res) => {
       Recipe.find({})
         .populate("author")
-        .then(recipe => {
+        .then(recipess => {
           res.render("app/index", { recipess });
         });
     }

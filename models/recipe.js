@@ -3,15 +3,16 @@ const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
 
 const Recipe = new Schema({
-    content: String,
-    createdAt: {
-      type: Date,
-      default: Date.now()
+    title: String,
+    description: String,
+    instructions: {
+      step1: String,
+      step2: String,
+      step3: String,
+      step4: String,
+      step5: String,
     },
-    author: {
-      type: Schema.Types.ObjectId,
-      ref: "User"
-    }
+    ingredients: []
   });
 
   module.exports = {
