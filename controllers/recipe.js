@@ -1,4 +1,6 @@
 //controllers - recipe
+const { Recipe } = require("../models/Recipe");
+const User = require("../models/User");
 
 module.exports = {
     show: (req, res) => {

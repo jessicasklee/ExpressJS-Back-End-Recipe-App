@@ -1,4 +1,6 @@
 //models - recipe
+const mongoose = require("../db/connection");
+const Schema = mongoose.Schema;
 
 const Recipe = new Schema({
     content: String,
@@ -11,4 +13,9 @@ const Recipe = new Schema({
       ref: "User"
     }
   });
+
+  module.exports = {
+    Recipe: mongoose.model("Recipe", Recipe)
+  };
+  
   

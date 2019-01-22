@@ -1,4 +1,5 @@
 //controllers - application
+const { Recipe } = require("../models/Recipe");
 
 module.exports = {
     index: (req, res) => {

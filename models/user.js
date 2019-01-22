@@ -1,4 +1,6 @@
 //models - user
+const mongoose = require("../db/connection");
+const Schema = mongoose.Schema;
 
 const User = new Schema({
     email: String,
@@ -10,7 +12,5 @@ const User = new Schema({
       }
     ]
   });
-  
-  app.listen(4000, () => {
-    console.log("app listening on port 4000")
-  })
+
+module.exports = mongoose.model("User", User);

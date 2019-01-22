@@ -1,4 +1,5 @@
 //controllers - user
+const User = require("../models/User")
 
 module.exports = {
 	show: (req, res) => {
