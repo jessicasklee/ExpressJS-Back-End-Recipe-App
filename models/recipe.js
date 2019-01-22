@@ -2,7 +2,7 @@
 const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
 
-const Recipe = new Schema({
+const recipeSchema = new Schema({
     title: String,
     description: String,
     instructions: {
@@ -15,8 +15,10 @@ const Recipe = new Schema({
     ingredients: []
   });
 
-  module.exports = {
-    Recipe: mongoose.model("Recipe", Recipe)
-  };
+  // module.exports = {
+  //   Recipe: mongoose.model("Recipe", Recipe)
+  // };
+
+  module.exports = mongoose.model("Recipe", recipeSchema)
   
   

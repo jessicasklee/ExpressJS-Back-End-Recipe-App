@@ -1,12 +1,13 @@
 //controllers - application
-const { Recipe } = require("../models/Recipe");
+const Recipe = require("../models/Recipe");
 
 module.exports = {
     index: (req, res) => {
       Recipe.find({})
-        .populate("author")
+        // .populate("author")
         .then(recipess => {
-          res.render("app/index", { recipess });
+          console.log(recipess)
+          res.render("app/index", { Recipe: recipess });
         });
     }
   };

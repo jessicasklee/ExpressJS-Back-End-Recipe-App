@@ -1,1 +1,19 @@
-<h1> hello world</h1>
+{{#if Recipe}}
+<ul class="recipeSs">
+  {{#each Recipe}}
+  <div class="card">
+    <div class="card-content">
+      <a class="card-title" href="/recipe/{{_id}}"> {{ title }} </a>
+    </div>
+    <div class="card-action">
+      {{!-- <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a> --}}
+      <span class="description">{{ description }}</span>
+      <span class="instructions">{{ instructions }}</span>
+      <span class="ingredients">{{ ingredients }} Ingredients</span>
+    </div>
+  </div>
+  {{/each}}
+</ul>
+{{/if}} 
+
+hey ths works
