@@ -6,8 +6,26 @@
    <title>Recipes</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
    <link rel= "stylesheet" href= "/css/styles.css">
+   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
  </head>
  <body>
+    <header class="site-header">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo left">Tweety</a>
+          <ul class="right">
+          {{#if currentUser}}
+            <li><a href="/tweet/new">+tweet</a></li>
+            <li><a href="/user/{{currentUser.id}}">Profile</a></li>
+            <li><a href="/user/logout">Log Out</a></li>
+          {{else}}
+            <li><a href="/user/login">Log In</a></li>
+            <li><a href="/user/sign-up">Sign Up</a></li>
+          {{/if}}
+          </ul>
+        </div>
+      </nav>
+    </header>
    <main class= "container">
      {{{ body }}}
      {{!-- <h1> HELLO </h1> --}}
