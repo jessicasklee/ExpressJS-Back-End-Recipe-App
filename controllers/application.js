@@ -12,28 +12,24 @@ module.exports = {
     }
   };
 
-var express = require('express');
-var router = express.Router();
-var passport = require("passport");
+// // GET /
+// router.get('/', (req, res) => {
+//   res.render('index')
+// })
 
-// GET /
-router.get('/', (req, res) => {
-  res.render('index')
-})
+// // GET /signup
+// router.get('/signup', (req, res) => {
+//   res.render('signup', {message: req.flash('signupMessage')})
+// })
 
-// GET /signup
-router.get('/signup', (req, res) => {
-  res.render('signup', {message: req.flash('signupMessage')})
-})
+// // POST /signup
+// router.post('/signup', (req, res) => {
+//   var signupStrategy = passport.authenticate('local-signup', {
+//     successRedirect: '/',
+//     failureRedirect: '/signup',
+//     failureFlash: true
+//   })
+//   return signupStrategy(req, res)
+// })
 
-// POST /signup
-router.post('/signup', (req, res) => {
-  var signupStrategy = passport.authenticate('local-signup', {
-    successRedirect: '/',
-    failureRedirect: '/signup',
-    failureFlash: true
-  })
-  return signupStrategy(req, res)
-})
-
-module.exports = router
+// module.exports = router
